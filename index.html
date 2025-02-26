@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리지역 기후공약 체크</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css"> <!-- CSS 파일 연결 -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <h2>지역구별 유효공약</h2>
+            <div id="filter_container">
+                <select id="filter_ElectionResult">
+                    <option value="all">선거 당락</option>
+                    <option value="낙선">낙선</option>
+                    <option value="당선">당선</option>
+                </select>
+                <select id="filter_ValidExist">
+                    <option value="all">유효공약 유무</option>
+                    <option value="yes">있음</option>
+                    <option value="no">없음</option>
+                </select>
+                <select id="filter_TotalPromises">
+                    <option value="all">전체 공약수</option>
+                    <option value="under_20">20개 미만</option>
+                    <option value="20_39">20~39개</option>
+                    <option value="40_59">40~59개</option>
+                    <option value="60_79">60~79개</option>
+                    <option value="80_99">80~99개</option>
+                    <option value="100_plus">100개 이상</option>
+                </select>
+                <select id="filter_RealPromises">
+                    <option value="all">실제 공약수</option>
+                    <option value="zero">0개</option>
+                    <option value="one_five">1~5개</option>
+                    <option value="six_ten">6~10개</option>
+                    <option value="ten_plus">10개 초과</option>
+                </select>
+            </div>
+            <ul id="marker-list"></ul>
+        </div>
+        <div id="map"></div>
+    </div>
+    
+    <div id="scroll-indicator">⬇ 기사 내용을 보시려면 아래로 스크롤하세요 ⬇</div>
+    <div id="content">
+        <h1>기사 제목</h1>
+        <p>여기에 기사가 들어갑니다...</p>
+        <canvas id="chart"></canvas>
+    </div>
+    
+    <script src="js/script.js"></script> <!-- JS 파일 연결 -->
+</body>
+</html>
